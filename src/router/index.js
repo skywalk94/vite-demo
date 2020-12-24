@@ -8,7 +8,7 @@ const router = createRouter({
     routes: [{
             path: "/",
             name: "index",
-            component: () => import("../views/index/index"),
+            component: () => import("../views/index/index.vue"),
             meta: {
                 title: "首页"
             }
@@ -16,7 +16,7 @@ const router = createRouter({
         {
             path: "/main",
             name: "main",
-            component: () => import("../views/main/main"),
+            component: () => import("../views/main/main.vue"),
             meta: {
                 title: "主要"
             }
