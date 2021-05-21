@@ -2,8 +2,23 @@ import {
     defineConfig
 } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import styleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
-    plugins: [vue()],
-    base: './'
+    plugins: [vue(),
+    styleImport({
+        libs: [
+            {
+                libraryName: 'vant',
+                esModule: true,
+                resolveStyle: (name) => `vant/es/${name}/style`,
+            },
+        ],
+    }),
+    ],
+    base: './',
+    server: {
+        host: '0.0.0.0',
+        open: false,
+    },
 })

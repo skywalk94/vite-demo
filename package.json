@@ -1,5 +1,5 @@
 {
-  "name": "viteDemo",
+  "name": "vite-demo",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,13 +8,17 @@
   },
   "dependencies": {
     "less": "^4.1.1",
-    "less-loader": "^8.0.0",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.4"
+    "lib-flexible": "^0.3.2",
+    "postcss-px2rem-exclude": "0.0.6",
+    "vant": "^3.0.16",
+    "vue": "^3.0.11",
+    "vue-router": "^4.0.8",
+    "vuex": "4.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.1.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.0.1"
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.11",
+    "vite": "^2.3.3",
+    "vite-plugin-style-import": "^0.10.0"
   }
 }

@@ -6,13 +6,13 @@ import {
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [{
-            path: '/',
-            component: () => import('../views/index/index.vue')
-        },
-        {
-            path: '/main',
-            component: () => import('../views/main/main.vue')
-        }
+        path: '/',
+        component: () => import('../views/index/index.vue')
+    },
+    {
+        path: '/main/:id',
+        component: () => import('../views/main/main.vue')
+    }
     ]
 });
 
