@@ -1,22 +1,17 @@
 <template>
-  <div>{{ value }}</div>
+  <div>{{ state.value }}</div>
 </template>
 
-<script>
-import { reactive, toRefs, onMounted } from "vue";
+<script setup>
+import { reactive } from "vue";
 import { useRoute } from "vue-router";
-export default {
-  setup() {
-    const route = useRoute();
-    const state = reactive({
-      value: route.params.id,
-    });
-    onMounted(() => {});
-    return {
-      ...toRefs(state),
-    };
-  },
-};
+
+const route = useRoute();
+const state = reactive({
+  value: route.params.id,
+});
+
 </script>
 
-<style src='./main.less' lang='less' scoped></style>
+<style src='./main.less' lang='less' scoped>
+</style>
