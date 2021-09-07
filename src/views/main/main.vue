@@ -12,10 +12,8 @@ export default {
       value: route.params.id,
     });
     onMounted(() => {});
-    const methods = {};
     return {
       ...toRefs(state),
-      ...methods,
     };
   },
 };

@@ -18,17 +18,15 @@ export default {
       console.log(store.state.num);
     });
 
-    const methods = {
-      goMain() {
-        router.push({
-          path: "/main/123",
-        });
-      },
+    const goMain = () => {
+      router.push({
+        path: "/main/123",
+      });
     };
 
     return {
       ...toRefs(state),
-      ...methods,
+      goMain,
     };
   },
 };

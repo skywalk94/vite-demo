@@ -10,15 +10,15 @@
     "less": "^4.1.1",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem-exclude": "0.0.6",
-    "vant": "^3.0.16",
-    "vue": "^3.0.11",
-    "vue-router": "^4.0.8",
-    "vuex": "4.0.0"
+    "vant": "^3.2.2",
+    "vue": "3.2.9",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/compiler-sfc": "^3.0.11",
-    "vite": "^2.3.3",
-    "vite-plugin-style-import": "^0.10.0"
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vue/compiler-sfc": "^3.2.9",
+    "vite": "^2.5.3",
+    "vite-plugin-style-import": "^1.2.1"
   }
 }
