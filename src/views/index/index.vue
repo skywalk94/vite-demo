@@ -1,12 +1,15 @@
 <template>
   <van-button type="success" @click="goMain()">{{ msg }}</van-button>
+  <router-link to="/father">
+    <van-button type="danger">父子组件通信</van-button>
+  </router-link>
   <van-button @click="showPop()">点击弹窗</van-button>
   <van-popup
     v-model:show="state.isPop"
     position="bottom"
     :style="{ height: '30%' }"
     @close="addPopState()"
-  />
+  >可通过返回进行关闭弹窗</van-popup>
 </template>
 <script setup>
 import { reactive, onMounted, ref, onBeforeUnmount } from "vue"
@@ -16,7 +19,7 @@ import { useStore } from "vuex"
 const router = useRouter()
 const store = useStore()
 
-let msg = ref("页面跳转")
+let msg = ref("页面跳转传参")
 const state = reactive({
   isPop: false
 })

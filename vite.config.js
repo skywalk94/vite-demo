@@ -3,6 +3,7 @@ import {
 } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import styleImport from 'vite-plugin-style-import';
+import path from "path"
 
 export default defineConfig({
     plugins: [vue(),
@@ -16,6 +17,9 @@ export default defineConfig({
         ],
     }),
     ],
+    alias: {
+        "@": path.resolve(__dirname, "src")
+    },
     base: './',
     server: {
         host: '0.0.0.0',

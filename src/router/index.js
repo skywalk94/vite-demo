@@ -12,6 +12,10 @@ const router = createRouter({
     {
         path: '/main/:id',
         component: () => import('../views/main/main.vue')
+    },
+    {
+        path: '/father',
+        component: () => import('../views/father/father.vue')
     }]
 });
 

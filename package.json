@@ -11,7 +11,7 @@
     "lib-flexible": "^0.3.2",
     "postcss-px2rem-exclude": "0.0.6",
     "vant": "^3.2.2",
-    "vue": "3.2.9",
+    "vue": "^3.2.20",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
   },
