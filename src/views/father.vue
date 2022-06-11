@@ -20,5 +20,5 @@ onMounted(() => {
 })
 </script>
 
-<style src="./father.less" lang='less' scoped>
+<style  lang='less' scoped>
 </style>

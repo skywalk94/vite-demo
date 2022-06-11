@@ -4,7 +4,6 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, defineExpose } from "vue"
 defineProps({
     //定义子组件需要接收的值
     title: {

@@ -1,16 +1,15 @@
-import {
-    createApp
-} from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import 'lib-flexible'
+import { createPinia } from "pinia"
 
-import vuex from './store'
-import { Button, Popup } from 'vant';
+import router from '@/router'
+import 'lib-flexible'
+import { Button, Popup } from 'vant'
 
 const app = createApp(App)
-app.use(Button)
-app.use(Popup)
-app.use(router)
-app.use(vuex)
+const pinia = createPinia()
+
+app.use(Button).use(Popup)
+
+app.use(router).use(pinia)
 app.mount('#app')
