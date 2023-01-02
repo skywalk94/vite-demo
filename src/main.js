@@ -1,15 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createPinia } from "pinia"
 
-import router from '@/router'
-import 'lib-flexible'
-import { Button, Popup } from 'vant'
+import vant from 'vant'
+import 'vant/lib/index.css'
+import './assets/style/vant-theme.css'
 
 const app = createApp(App)
-const pinia = createPinia()
-
-app.use(Button).use(Popup)
-
-app.use(router).use(pinia)
-app.mount('#app')
+app.use(vant).mount('#app')

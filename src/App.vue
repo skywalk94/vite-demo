@@ -1,14 +1,19 @@
 <template>
-  <router-view></router-view>
+  <p>检查适配移动端</p>
+  <van-button type="primary" @click="open">主要按钮</van-button>
+  <van-button type="success">成功按钮</van-button>
+  <van-button type="default">默认按钮</van-button>
+  <van-button type="warning">警告按钮</van-button>
+  <van-button type="danger">危险按钮</van-button>
 </template>
-
 <script setup>
+import { showNotify } from 'vant'
+const open = () => {
+  showNotify({ message: '提示' })
+}
 </script>
-
-<style lang="less">
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+<style scoped>
+p {
+  font-size: 32px;
+}
 </style>

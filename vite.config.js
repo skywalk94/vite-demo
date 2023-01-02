@@ -1,27 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import styleImport, { VantResolve } from 'vite-plugin-style-import'
-import path from "path"
+import pxtovw from 'postcss-px-to-viewport'
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        styleImport({
-            resolves: [VantResolve()],
+  plugins: [vue()],
+  css: {
+    postcss: {
+      plugins: [
+        pxtovw({
+          // 更多配置参考：https://github.com/evrone/postcss-px-to-viewport
+          viewportWidth: 750, // 设计稿宽度
+          unitPrecision: 2, // 保留小数点后2位
+          exclude: [/node_modules/], //忽略哪些文件转换
         })
-    ],
-    alias: {
-        "@": path.resolve(__dirname, "src")
-    },
-    base: './',
-    server: {
-        host: '0.0.0.0',
-        proxy: {
-            '/api': {
-                target: '',
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, '')
-            }
-        }
-    },
+      ]
+    }
+  },
 })

@@ -1,24 +1,20 @@
 {
-  "name": "vite-demo",
+  "name": "vant-demo",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "less": "^4.1.1",
-    "lib-flexible": "^0.3.2",
-    "pinia": "^2.0.14",
-    "postcss-px2rem-exclude": "0.0.6",
-    "vant": "^3.2.2",
-    "vue": "^3.2.20",
-    "vue-router": "^4.0.11"
+    "vant": "^4.0.6",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.6.1",
-    "@vue/compiler-sfc": "^3.2.9",
-    "vite": "^2.5.3",
-    "vite-plugin-style-import": "1.4.1"
+    "@vitejs/plugin-vue": "^4.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "vite": "^4.0.3"
   }
 }
